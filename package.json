@@ -1,0 +1,14 @@
+{
+  "name": "youtube-resource-gallery",
+  "version": "1.0.0",
+  "description": "A YouTube resource gallery where you can save all videos from YouTube that are helpful resources for you or just may want to save them for later that you can go back and visit anytime.\r <br>",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "author": "qeta",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.71.0"
+  }
+}
