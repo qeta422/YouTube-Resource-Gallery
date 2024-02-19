@@ -3,7 +3,8 @@ const videoContainer = document.getElementById('videoContainer');
 let youTubeVideoIds = [];
 
 const loadVideos = () => {
-    youTubeVideoIds = ['9C74_rOgui8', '-O5O32hchis'];
+    youTubeVideoIds = JSON.parse(localStorage.getItem('youTubeVideoIds')) || [];
+    console.log(youTubeVideoIds);
 }
 
 const displayVideos = () => {
