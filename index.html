@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>YouTube Resource</title>
+    <title>My YouTube Resource Gallery</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
@@ -11,7 +11,23 @@
 
 </head>
 <body>
+    <section class="container">
+        <article class="heading">
+            <aside class="heading__left">
+                <h1 class="heading__left--headline">My YouTube Resource Gallery</h1>
+                <p>The perfect app to keep track of valuable resources while learning to code. 
+                    As you come across a helpful video, add the id here.</p>
+            </aside>
+            <form action="">
+                <label for="videoID">video ID</label>
+                <input type="text" name="videoID" id="videoID" placeholder="DF9&DFF6">
+                <button onclick="saveVideo(event)">Save The Video!</button>
+            </form>
+            <ul id="videoContainer">
 
+            </ul>
+        </article>
+    </section>
     <script src='js/main.js'></script>
 </body>
 </html>
