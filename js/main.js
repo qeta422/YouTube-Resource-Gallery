@@ -1,5 +1,7 @@
 const videoContainer = document.getElementById('videoContainer');
 const videoIdInput = document.getElementById('videoID');
+const popup = document.getElementById('popup');
+const videoEl = document.querySelector('#popup > iframe');
 let youTubeVideoIds = [];
 const IDS_KEY = "youTubeVideoIds";
 
@@ -26,6 +28,11 @@ const clickVideo = (event, id) => {
         localStorage.setItem(IDS_KEY, JSON.stringify(youTubeVideoIds));
         displayVideos();
     }
+    else {
+        videoEl.src =`https://www.youtube.com/embed/${id}`;
+        popup.classList.add('open');
+        popup.classList.remove('closed');
+    }
 };
 
 const saveVideo = (e) => {
@@ -36,6 +43,11 @@ const saveVideo = (e) => {
     localStorage.setItem(IDS_KEY, JSON.stringify(youTubeVideoIds));
     displayVideos();
 };
+
+const hendlePopupClick = () => {
+    popup.classList.add('closed');
+    popup.classList.remove('open');
+}
 
 loadVideos();
 displayVideos();
